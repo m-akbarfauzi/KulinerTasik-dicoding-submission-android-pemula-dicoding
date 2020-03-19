@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AboutProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/about"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/about" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user"
+                android:textSize="24sp"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/email" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/follow"
+            android:padding="16dp"
+            android:gravity="center" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/fb"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/facebook"
+                android:scaleType="fitXY"
+                android:padding="2dp"
+                android:background="@android:color/transparent"
+                android:onClick="buttonFacebook"
+                tools:ignore="ContentDescription" />
+            <ImageButton
+                android:id="@+id/youtube"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/youtube"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:onClick="buttonYoutube"
+                tools:ignore="ContentDescription" />
+            <ImageButton
+                android:id="@+id/instagram"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/instagram"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:onClick="buttonInstagram"
+                tools:ignore="ContentDescription" />
+            <ImageButton
+                android:id="@+id/whatsapp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/whatsapp"
+                android:scaleType="fitXY"
+                android:padding="2dp"
+                android:background="@android:color/transparent"
+                android:onClick="buttonWhatsApp"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

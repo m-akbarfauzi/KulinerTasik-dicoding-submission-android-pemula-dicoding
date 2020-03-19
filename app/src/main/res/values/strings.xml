@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Kuliner Tasik</string>
+    <string name="kuliners_name">Nama Kuliner</string>
+    <string name="detail">Detail</string>
+    <string name="alamat">Alamat</string>
+    <string name="jam_buka">Jam Buka</string>
+    <string name="price">Harga</string>
+    <string name="operation">Mulai Jam</string>
+    <string name="about">About</string>
+    <string name="follow">Follow me on</string>
+    <string name="email">m.akbarfauzi9@gmail.com</string>
+    <string name="nama">user</string>
+    <string name="user">Muhammad Akbar Fauzi</string>
+    <string name="infomasi">Infomasi</string>
+    <string name="kategori">Kategori</string>
+    <string name="buy">Beli</string>
+</resources>

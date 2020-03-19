@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/item_detail"
+    tools:context=".DetailActivity"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:id="@+id/card_view"
+        card_view:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_item_photo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription"
+                tools:srcCompat="@drawable/sate_maranggi_tasik" />
+
+            <TextView
+                style="@style/TextInfo"
+                android:id="@+id/tv_item_name"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/img_item_photo"
+                android:text="@string/kuliners_name" />
+
+            <LinearLayout
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_item_name"
+                android:layout_toEndOf="@+id/img_item_photo"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextTransparent"
+                    android:text="@string/price" />
+                <TextView
+                    android:id="@+id/tv_harga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    tools:text="@string/price" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_price"
+                android:layout_alignBottom="@+id/img_item_photo"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toEndOf="@+id/img_item_photo"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/transparent"
+                    card_view:srcCompat="@android:drawable/btn_star_big_on"
+                    android:onClick="buttonStar"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/btn_set_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/transparent"
+                    card_view:srcCompat="@android:drawable/ic_menu_share"
+                    android:onClick="buttonShare"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_button"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="@+id/belii"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+<!--                <HorizontalScrollView-->
+<!--                    android:layout_width="120dp"-->
+<!--                    android:layout_height="120dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <androidx.recyclerview.widget.RecyclerView-->
+<!--                            android:id="@+id/rv_row"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            tools:listitem="@layout/item_row_card"/>-->
+<!--                    </LinearLayout>-->
+<!--                </HorizontalScrollView>-->
+
+                <TextView
+                    style="@style/TextTransparent"
+                    android:text="@string/kategori"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_kategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/black"
+                    tools:text="Kategori" />
+
+                <TextView
+                    style="@style/TextTransparent"
+                    android:text="@string/infomasi"
+                    android:textSize="12sp" />
+
+                <TextView
+                    style="@style/TextInfo"
+                    android:id="@+id/tv_item_detail"
+                    tools:text="@string/detail" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/belii"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desc"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="4dp"
+                android:paddingBottom="16dp"
+                android:orientation="vertical">
+
+                <Button
+                    style="@style/ButtonBuy"
+                    android:onClick="buttonBuy"
+                    android:text="@string/buy" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>
